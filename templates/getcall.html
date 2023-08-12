@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{%block title%}
+		{%endblock%}getcall</title>
+</head>
+<body style="background-color:teal;">
+{%block body%}
+<h3>Fill the form</h3>
+<form method="post" action="{%url 'getcall'%}">
+	{%csrf_token%}
+	{{forms.as_p}}
+
+	<input type="submit">
+</form><br>
+{%endblock%}
+
+
+</body>
+</html>
